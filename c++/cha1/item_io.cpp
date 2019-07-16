@@ -10,11 +10,12 @@ int main() {
      * cin >> book;
      * cout << book << endl;
      */
-    /*
-     * 输出两个对象的和
-     * Sales_item item1, item2;
-     * cin >> item1 >> item2;
-     * cout << item1 + item2 << endl;
-     */
+
+    Sales_item item1, item2;
+    cin >> item1 >> item2;
+    if (compareIsbn(item1, item2))
+        cout << item1 + item2 << endl;
+    else
+        cout << "ISBN不同" << endl;
     return 0;
 }
