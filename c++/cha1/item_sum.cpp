@@ -19,7 +19,7 @@ int main() {
         }
         cout << item.isbn() << "消费记录：" << sum << endl;
     } else {
-        cout << "没有数据" << endl;
+        cerr << "No data?!" << endl;
         return -1;
     }
     return 0;
