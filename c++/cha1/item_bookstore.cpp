@@ -11,11 +11,11 @@ int main() {
             if (total.isbn() == trans.isbn())
                 total += trans;
             else {
-                cout << total << endl;
+                cout << "销售报告" << total << endl;
                 total = trans;
             }
         }
-        cout << total << endl;
+        cout << "销售报告" << total << endl;
     } else {
         cerr << "No data?!" << endl;
         return -1;
