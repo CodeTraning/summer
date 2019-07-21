@@ -7,7 +7,7 @@ Array* arrayCreate() {
     struct Array *array = NULL;
     array = malloc(sizeof(*array));
     if (NULL == array) {
-        return MULL;
+        return NULL;
     }
 
     array->p = NULL;
@@ -43,7 +43,7 @@ void arrayInit(Array *array, int size, int typeSize) {
     array->typeSize = typeSize;
 }
 
-int arrayInsert(Array &array, size_t pos, void *const value) {
+int arrayInsert(Array *array, size_t pos, void *const value) {
     if (NULL == array) {
         return -1;
     }
@@ -84,7 +84,7 @@ size_t arraySearchValue(Array *array, void* const value) {
 
     char *pBegin = array->p;
     size_t i = 0;
-    for (; i < array->len, ++i) {
+    for (; i < array->len; ++i) {
         int nCmp = 0;
         if (NULL != array->match) {
             nCmp = array->match(pBegin + i * array->typeSize, value);
@@ -206,4 +206,8 @@ void arrayDelIndex(Array *array, size_t pos) {
     }
 
     --array->len;
+}
+
+int main() {
+    return 0;
 }
