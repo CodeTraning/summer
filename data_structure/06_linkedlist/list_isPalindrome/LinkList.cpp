@@ -13,6 +13,7 @@ void CreateListHead(LinkList *&L, ElemType a[], int n) {
         L->next = s;
     }
 }
+
 // 尾插法
 void CreateListTail(LinkList *&L, ElemType a[], int n) {
     int i;
