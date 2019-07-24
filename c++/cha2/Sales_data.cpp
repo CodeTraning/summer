@@ -7,6 +7,7 @@ int main() {
     while (std::cin >> book) {
         std::cout << "ISBN、售出本数、原始价格、实售价格、折扣为" << book << std::endl;
     }
+    // 退出循环需要按esc+回车+esc+回车
     // 及时清除缓冲区
     std::cin.clear();
     std::cin.ignore();
