@@ -30,7 +30,7 @@ void CreateListTail(LinkList *&L, ElemType a[], int n) {
 }
 
 void InitList(LinkList *&L) {
-    L = (LinkList *)mallco(sizeof(LinkList));
+    L = (LinkList *)malloc(sizeof(LinkList));
     L->next = NULL;
 }
 
