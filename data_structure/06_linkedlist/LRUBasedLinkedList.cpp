@@ -13,7 +13,7 @@ class SList {
         SList(int MaxSize);
         ~SList();
         // 头部插入节点
-        void intsertElemAtBegin(DataType x);
+        void insertElemAtBegin(DataType x);
         // 查找x，存在则返回1，不存在则返回0
         bool findElem(DataType x);
         // 删除尾节点
@@ -23,6 +23,7 @@ class SList {
         // 查看链表是否为空，1表示不为空，0表示为空
         bool isEmpty();
         // 查看链表是否满，1表示不满，0表示满
+        bool isFull();
         void printAll();
 
         // 针对此应用的优化，查找、返回指定元素的前一个节点的指针
@@ -184,5 +185,34 @@ void SList::deleteElemOptim(void *snode) {
 }
 
 int main() {
-
+    cout << "test" << endl;
+    SList slist(10); // 缓存最大10个
+    int num = 0;
+    while (1) {
+        cout << "please enter a number,99999 == exit" << endl;
+        cin >> num;
+        if (num == 99999) break;
+        /*未优化
+         if (slist.findElem(num)) { // 存在
+             slist.deleteElem(num); // 把原来的位置删除
+             slist.insertElemAtBegin(num); // 在链表表头插入
+         }
+         */
+        // 优化
+        SNode *prePtr = (SNode *)slist.findElemOptim(num);
+        if (prePtr != NULL) { // 存在
+            slist.deleteElemOptim(prePtr); // 把原来的位置删除
+            slist.insertElemAtBegin(num); // 在链表头插入
+        } else { // 不存在
+            if (slist.isFull()) { // 不满
+                slist.insertElemAtBegin(num);
+            } else {
+                slist.deleteElemAtEnd();
+                slist.insertElemAtBegin(num);
+            }
+        }
+        slist.printAll();
+    }
+    return 0;
+    system("pause");
 }
