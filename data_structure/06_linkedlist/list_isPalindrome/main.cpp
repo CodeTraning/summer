@@ -1,5 +1,5 @@
 #include "LinkList.h"
-char array1[] = {'a', 'b', 'c', 'b', 'a'};
+char array1[] = {'a', 'b', 'e', 'b', 'a'};
 bool isPalindrome(LinkList *list, int length);
 
 int main() {
