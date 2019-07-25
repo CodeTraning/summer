@@ -1,6 +1,6 @@
 #include "LinkList.h"
 
-// 头插法
+// 单链表头插法
 void CreateListHead(LinkList *&L, ElemType a[], int n) {
     int i;
     LinkList *s;
@@ -14,7 +14,7 @@ void CreateListHead(LinkList *&L, ElemType a[], int n) {
     }
 }
 
-// 尾插法
+// 单链表尾插法
 void CreateListTail(LinkList *&L, ElemType a[], int n) {
     int i;
     LinkList *s, *r;
