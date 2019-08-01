@@ -98,14 +98,14 @@ int main() {
     arrstack.push(110);
     arrstack.push(120);
     arrstack.push(130);
-    arrsatck.push(140);
+    arrstack.push(140);
     arrstack.push(150);
 
     cout << "peek , not delete " << arrstack.peek() << endl;
     cout << "pop , delete " << arrstack.pop() << endl;
 
     arrstack.push(210);
-    arrsatck.push(220);
+    arrstack.push(220);
 
     cout << "peek , not delete " << arrstack.peek() << endl;
     cout << "pop , delete " << arrstack.pop() << endl;
