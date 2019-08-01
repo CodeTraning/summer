@@ -69,7 +69,7 @@ template<class T> T ArrayStack<T>::pop() {
 }
 
 // 出栈，不删除栈顶元素
-template<class T> T ArrayStack<T>::peck() {
+template<class T> T ArrayStack<T>::peek() {
     T temp = this -> array[this -> flag - 1];
     return temp;
 }
