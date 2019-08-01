@@ -109,7 +109,8 @@ int main() {
 
     cout << "peek , not delete " << arrstack.peek() << endl;
     cout << "pop , delete " << arrstack.pop() << endl;
-
+    // cout << arrstack.pop() << endl;
+    // cout << arrstack.pop() << endl;
     system("pause");
     return 0;
 }
