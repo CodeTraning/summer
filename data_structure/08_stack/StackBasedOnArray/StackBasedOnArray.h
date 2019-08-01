@@ -1,6 +1,6 @@
 // 类模板的声明(line 2)，类模板实例化后就是模板类
-// 类模板声明的写法 template <class T> class 类名{}
-template <class T> class ArrayStack
+// 类模板声明的写法 template<class T> class 类名{}
+template<class T> class ArrayStack
 {
 public:
     ArrayStack();
