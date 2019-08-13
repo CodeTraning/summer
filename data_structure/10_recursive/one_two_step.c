@@ -12,7 +12,7 @@ int helper(int n, int *value) {
 	return value[n];
 }
 
-int climbStaris(int n) {
+int climbStairs(int n) {
 	int *value = NULL;
 	int res = 0;
 
@@ -33,8 +33,8 @@ int climbStaris(int n) {
 
 
 int main() {
-	printf("building height:%d, method:%d\n", 5, climbStaris(5));
-	printf("building height:%d, method:%d\n", 6, climbStaris(6));
-	printf("building height:%d, method:%d\n", 7, climbStaris(7));
+	printf("building height:%d, methods:%d\n", 5, climbStairs(5));
+	printf("building height:%d, methods:%d\n", 6, climbStairs(6));
+	printf("building height:%d, methods:%d\n", 7, climbStairs(7));
 	return 0;
 }
