@@ -20,7 +20,7 @@ class Sales_data {
     public:
         Sales_data& operator += (const Sales_data&);
         // isbn函数只有一条语句，返回bookN
-        //std::string isbn() const { return bookNo; }
+        // std::string isbn() const { return bookNo; }
     private:
         std::string bookNo;         // 书籍编号，隐式初始化为空串
         unsigned units_sold = 0;    // 销售量，显式初始化为0
