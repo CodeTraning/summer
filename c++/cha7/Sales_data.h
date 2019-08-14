@@ -46,9 +46,10 @@ inline bool operator != (const Sales_data &lhs, const Sales_data &rhs) {
 }
 
 Sales_data& Sales_data::operator += (const Sales_data& rhs) {
-    units_sold += rhs.units_sold;
+    //units_sold += rhs.units_sold;
     saleprice = (rhs.saleprice * rhs.units_sold + saleprice * units_sold)
         / (rhs.units_sold + units_sold);
+    units_sold += rhs.units_sold;
     if (sellingprice != 0)
         discount = saleprice / sellingprice;
     return *this;
