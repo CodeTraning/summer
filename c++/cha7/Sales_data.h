@@ -19,13 +19,25 @@ class Sales_data {
         Sales_data(std::istream &is) { is >> *this; }
     public:
         Sales_data& operator += (const Sales_data&);
-        std::string isbn() const { return bookNo; }
+        // isbn函数只有一条语句，返回bookN
+        //std::string isbn() const { return bookNo; }
     private:
         std::string bookNo;         // 书籍编号，隐式初始化为空串
         unsigned units_sold = 0;    // 销售量，显式初始化为0
         double sellingprice = 0.0;  // 原始价格，显式初始化为0.0
         double saleprice = 0.0;     // 实售价格，显式初始化为0.0
         double discount = 0.0;      // 折扣，显式初始化为0.0
+    // 7.2添加内容
+    public:
+        std::string isbn() const { return bookNo; }
+        Sales_data& combine(const Sales_data &rhs) {
+            saleprice = (rhs.saleprice * rhs.units_sold + saleprice * units_sold)
+                        / (rhs.units_sold + units_sold);
+            units_sold += rhs.units_sold; // 累加书籍的销售量
+            if (sellingprice != 0)
+                discount = saleprice / sellingprice;
+            return *this;
+        }
 };
 
 inline bool compareIsbn(const Sales_data &lhs, const Sales_data &rhs) {
