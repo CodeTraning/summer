@@ -43,10 +43,10 @@ void insert_sort(int a[], int size) {
 
 	for (i = 1; i < size; ++i) {
 		key = a[i];
-		for (j = i-1; j >= 0 && a[j] > key; --j) {
-			a[j+1] = a[j];
+		for (j = i; j >= 0 && a[j-1] > key; --j) {
+			a[j] = a[j-1];
 		}
-		a[j+1] = key;
+		a[j] = key;
 	}
 	return;
 }
@@ -86,8 +86,8 @@ void dump(int a[], int size) {
 int main() {
 	int a[10] = {9, 11, 3, 4, 15, 22, 5, 10, 44, 20};
 
-	bubble_sort(a,sizeof(a)/sizeof(int));
-    //insert_sort(a,sizeof(a)/sizeof(int));
+	//bubble_sort(a,sizeof(a)/sizeof(int));
+    insert_sort(a,sizeof(a)/sizeof(int));
     //select_sort(a,sizeof(a)/sizeof(int));
     
     dump(a,sizeof(a)/sizeof(int));
