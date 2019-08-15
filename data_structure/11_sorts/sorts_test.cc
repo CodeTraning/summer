@@ -34,9 +34,9 @@ int main() {
     }
     std::cout << '\n';
 
-    //std::vector<int> e(test_data.begin(), test_data.end());
-    shell_sort(test_data.begin(), test_data.end());
-    for (auto i : test_data) {
+    std::vector<int> e(test_data.begin(), test_data.end());
+    shell_sort(e.begin(), e.end());
+    for (auto i : e) {
         std::cout << i << ' ';
     }
     std::cout << '\n';
