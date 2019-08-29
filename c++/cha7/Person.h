@@ -11,7 +11,7 @@ class Person {
             strName = name;
             strAddress = add;
         }
-    Person(std::istream &is) { is >> *this; }
+        Person(std::istream &is) { is >> *this; }
     public:
         string getName() const { return strName; } // 返回姓名
         string getAddress() const { return strAddress; } // 返回地址
