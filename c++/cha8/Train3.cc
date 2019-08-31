@@ -4,12 +4,17 @@
 
 using namespace std;
 
+/*
+ *argc是传入参数的个数，”传入的参数“加上可执行文件的文件名；
+ *argv[]存放的是传给main函数的参数，
+ *argv是字符串数组，所以下标从0开始，第一个存放的是可执行程序的文件名字，然后依次存放传入的参数；
+ */
 int main(int argc, char *argv[]) {
 	if (argc != 2) {
 		cerr << "请给出文件名" << endl;
 		return -1;
 	}
-	ifstream in(argv[2]);
+	ifstream in(argv[1]);
 	if (!in) {
 		cerr << "无法打开输入文件" << endl;
 		return -1;
