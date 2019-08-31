@@ -14,7 +14,7 @@ int main() {
 
 	string line;
 	vector<string> words;
-	while (getline(in, line)) { // 从文件中读取一行
+	while (in >> line) { // 从文件中读取一行
 		words.push_back(line);
 	}
 
