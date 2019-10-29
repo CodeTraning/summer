@@ -26,7 +26,7 @@ istream & f(istream & in) {
 }
 
 int main() {
-	cout << "请输入一些整数..." << endl;
+	cout << "请输入一些整数:" << endl;
 	f(cin);
 	return 0;
 }
